@@ -1,5 +1,5 @@
 {
-  "name": "tsconfig",
+  "name": "@foxglove/tsconfig",
   "private": false,
   "version": "0.0.1",
   "description": "Base TypeScript configuration for Foxglove projects",
