@@ -13,6 +13,9 @@
     // enable JS only as needed on per-project basis
     "allowJs": false,
 
+    // required to support esbuild, babel, and similar transpilers
+    "isolatedModules": true,
+
     // support fast package rebuilds
     "composite": true,
 
