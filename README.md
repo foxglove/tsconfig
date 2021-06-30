@@ -14,3 +14,14 @@ To use, run `npm i --save-dev @foxglove/tsconfig`, then extend your `tsconfig.js
   }
 }
 ```
+
+## License
+
+[MIT License](/LICENSE.md)
+
+## Releasing
+
+```sh
+tag=$(npm version minor) && echo "$tag"
+git push && git push origin "$tag"
+```
