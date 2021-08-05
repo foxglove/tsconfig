@@ -17,9 +17,9 @@
     // required to support esbuild, babel, and similar transpilers
     "isolatedModules": true,
 
-    // ensure support for fast incremental package rebuilds, but disable them by default to avoid
-    // .tsbuildinfo files being accidentally included in package archives
-    "composite": true,
+    // disable composite/incremental builds by default to prevent .tsbuildinfo files from being
+    // accidentally included in package archives
+    "composite": false,
     "incremental": false,
 
     // produce consistent output across all platforms
