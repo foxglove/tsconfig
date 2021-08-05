@@ -1,6 +1,7 @@
 // -*- jsonc -*-
 // Base TypeScript configuration
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     // build es2020 modules by default
     "module": "es2020",
@@ -16,8 +17,10 @@
     // required to support esbuild, babel, and similar transpilers
     "isolatedModules": true,
 
-    // support fast package rebuilds
+    // ensure support for fast incremental package rebuilds, but disable them by default to avoid
+    // .tsbuildinfo files being accidentally included in package archives
     "composite": true,
+    "incremental": false,
 
     // produce consistent output across all platforms
     "newLine": "lf",
