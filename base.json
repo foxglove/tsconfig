@@ -3,10 +3,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    // build es2020 modules by default
-    "module": "es2020",
-    "target": "es2020",
-    "lib": ["es2020"],
+    // build es2022 modules by default
+    "module": "es2022",
+    "target": "es2022",
+    "lib": ["es2022"],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "importHelpers": true,

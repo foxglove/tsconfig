@@ -1,3 +1,3 @@
-export default function foo(): number {
+export default function test(): number {
   return 42;
 }
