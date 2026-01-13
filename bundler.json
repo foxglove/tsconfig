@@ -1,0 +1,13 @@
+// -*- jsonc -*-
+// TypeScript configuration for frontend/bundled applications (Webpack, esbuild, etc)
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    // Bundler handles module resolution
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.AsyncIterable", "DOM.Iterable"]
+  }
+}

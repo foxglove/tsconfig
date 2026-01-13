@@ -1,0 +1,12 @@
+// -*- jsonc -*-
+// TypeScript configuration for Node.js applications and libraries
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    // Node.js ESM
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext"
+  }
+}

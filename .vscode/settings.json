@@ -1,12 +1,11 @@
-// -*- jsonc -*-
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "prettier.prettier-vscode",
   "files.associations": {
-    "base.json": "jsonc"
+    "*.json": "jsonc"
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
