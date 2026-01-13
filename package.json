@@ -1,20 +1,29 @@
 {
   "name": "@foxglove/tsconfig",
-  "private": false,
   "version": "2.0.0",
   "description": "Base TypeScript configuration for Foxglove projects",
   "license": "MIT",
-  "repository": "github:foxglove/tsconfig",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxglove/tsconfig.git"
+  },
+  "homepage": "https://github.com/foxglove/tsconfig",
   "author": {
     "name": "Foxglove",
     "email": "contact@foxglove.dev",
     "url": "https://foxglove.dev/"
   },
+  "packageManager": "yarn@4.12.0",
   "files": [
-    "*.json"
+    "base.json"
   ],
   "scripts": {
-    "lint": "tsc --project base.json --outDir dist && eslint ."
+    "clean": "rm -rf dist",
+    "build": "yarn clean && tsc --project base.json --outDir dist",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint --fix .",
+    "lint:check": "eslint ."
   },
   "devDependencies": {
     "@foxglove/eslint-plugin": "0.21.2",

@@ -1,4 +1,5 @@
 .DS_Store
+.yarn/
 *.log
 *.tsbuildinfo
 dist/

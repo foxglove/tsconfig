@@ -4,7 +4,7 @@
 
 Base tsconfig for Foxglove projects.
 
-To use, run `npm i --save-dev @foxglove/tsconfig`, then extend your `tsconfig.json` like so:
+To use, run `yarn add -D @foxglove/tsconfig`, then extend your `tsconfig.json` like so:
 
 ```json
 {
