@@ -36,4 +36,4 @@ jobs:
       # Publish version tags
       - name: npm publish
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
-        run: yarn npm publish --access public --provenance --tag test
+        run: yarn npm publish --access public --provenance
