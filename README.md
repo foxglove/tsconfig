@@ -35,7 +35,7 @@ Uses `module: "NodeNext"` which enforces Node.js ESM rules, where imports must i
 
 > **Note:** Uses `target: "ESNext"`. For older Node.js versions, set a lower target (e.g., `"ES2022"` for Node 18).
 
-> **Cross-platform libraries:** Use `node.json` even if your library will be used in bundled apps. Bundlers consume Node-style packages natively—just avoid Node-specific APIs like `fs` or `process`.
+> **Cross-platform libraries:** Use `node.json` even if your library will be used in bundled apps. Bundlers consume Node-style packages natively, just remember to avoid Node-specific APIs like `fs` or `process`.
 
 ### Bundled applications (Vite, Webpack, esbuild, etc)
 
