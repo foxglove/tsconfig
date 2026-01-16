@@ -33,9 +33,9 @@ Choose the config that matches your environment:
 
 > **Note:** Uses `target: "ESNext"`. For older Node.js versions, set a lower target (e.g., `"ES2022"` for Node 18).
 
-> **Cross-platform libraries:** Use `node.json` even if your library will be used in frontend apps. Bundlers consume Node-style packages natively—just avoid Node-specific APIs like `fs` or `process`.
+> **Cross-platform libraries:** Use `node.json` even if your library will be used in bundled apps. Bundlers consume Node-style packages natively—just avoid Node-specific APIs like `fs` or `process`.
 
-### Frontend applications (Vite, Webpack, esbuild, etc)
+### Bundled applications (Vite, Webpack, esbuild, etc)
 
 For bundled apps that run in the browser (not published as packages):
 
