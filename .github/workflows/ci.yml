@@ -31,7 +31,7 @@ jobs:
       - run: yarn install
       - run: yarn fmt:check
       - run: yarn lint:check
-      - run: yarn build
+      - run: yarn test
 
       # Publish version tags
       - name: npm publish

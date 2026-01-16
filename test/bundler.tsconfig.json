@@ -1,0 +1,7 @@
+{
+  "extends": "../bundler.json",
+  "include": ["bundler.ts"],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

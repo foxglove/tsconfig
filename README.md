@@ -4,15 +4,59 @@
 
 Base tsconfig for Foxglove projects.
 
-To use, run `yarn add -D @foxglove/tsconfig`, then extend your `tsconfig.json` like so:
+## Requirements
+
+- TypeScript v5.8+
+
+## Installation
+
+```sh
+yarn add -D @foxglove/tsconfig
+```
+
+## Usage
+
+Choose the config that matches your environment:
+
+### Node.js applications and libraries
 
 ```json
 {
-  "extends": "@foxglove/tsconfig/base",
+  "extends": "@foxglove/tsconfig/node.json",
   "include": ["./src/**/*"],
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist"
+  }
+}
+```
+
+> **Note:** Uses `target: "ESNext"`. For older Node.js versions, set a lower target (e.g., `"ES2022"` for Node 18).
+
+> **Cross-platform libraries:** Use `node.json` even if your library will be used in frontend apps. Bundlers consume Node-style packages natively—just avoid Node-specific APIs like `fs` or `process`.
+
+### Frontend applications (Vite, Webpack, esbuild, etc)
+
+For bundled apps that run in the browser (not published as packages):
+
+```json
+{
+  "extends": "@foxglove/tsconfig/bundler.json",
+  "include": ["./src/**/*"]
+}
+```
+
+### Base config
+
+Provides strict type-checking and modern defaults, but no `module`, `moduleResolution`, or `target` settings. Use this when `node.json` and `bundler.json` don't fit your environment:
+
+```json
+{
+  "extends": "@foxglove/tsconfig/base.json",
+  "compilerOptions": {
+    "target": "...",
+    "module": "...",
+    "moduleResolution": "..."
   }
 }
 ```
