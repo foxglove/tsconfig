@@ -46,7 +46,8 @@ Uses `module: "Preserve"` which allows extensionless imports (e.g., `import { fo
   "extends": "@foxglove/tsconfig/bundler.json",
   "include": ["./src/**/*"],
   "compilerOptions": {
-    "noEmit": true
+    "noEmit": true,
+    "lib": ["ESNext", "DOM"]
   }
 }
 ```
