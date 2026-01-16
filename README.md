@@ -48,7 +48,7 @@ For bundled apps that run in the browser (not published as packages):
 
 ### Base config
 
-Provides strict type-checking and modern defaults, but no `module`, `moduleResolution`, or `target` settings. Use this when `node.json` and `bundler.json` don't fit your environment:
+Provides strict type-checking and modern defaults, but no `module` or `moduleResolution` settings. Use this when `node.json` and `bundler.json` don't fit your environment:
 
 ```json
 {

@@ -5,6 +5,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    // Language
+    "target": "ESNext",
+
     // Type checking
     "strict": true,
     "noFallthroughCasesInSwitch": true,
