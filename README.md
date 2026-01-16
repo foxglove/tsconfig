@@ -20,6 +20,8 @@ Choose the config that matches your environment:
 
 ### Node.js applications and libraries
 
+Uses `module: "NodeNext"` which enforces Node.js ESM rules—imports must include explicit file extensions (e.g., `import { foo } from "./bar.js"`).
+
 ```json
 {
   "extends": "@foxglove/tsconfig/node.json",
@@ -37,7 +39,7 @@ Choose the config that matches your environment:
 
 ### Bundled applications (Vite, Webpack, esbuild, etc)
 
-For bundled apps that run in the browser (not published as packages):
+Uses `module: "Preserve"` which allows extensionless imports (e.g., `import { foo } from "./bar"`)—the bundler handles resolution.
 
 ```json
 {
