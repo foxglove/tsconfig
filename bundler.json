@@ -6,8 +6,6 @@
   "compilerOptions": {
     // Bundler handles module resolution
     "module": "Preserve",
-    "moduleResolution": "Bundler",
-    "target": "ESNext",
-    "lib": ["ESNext", "DOM", "DOM.AsyncIterable", "DOM.Iterable"]
+    "moduleResolution": "Bundler"
   }
 }

@@ -6,7 +6,6 @@
   "compilerOptions": {
     // Node.js ESM
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ESNext"
+    "moduleResolution": "NodeNext"
   }
 }

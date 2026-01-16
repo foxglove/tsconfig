@@ -20,6 +20,8 @@ Choose the config that matches your environment:
 
 ### Node.js applications and libraries
 
+Uses `module: "NodeNext"` which enforces Node.js ESM rules, where imports must include explicit file extensions (e.g., `import { foo } from "./bar.ts"`).
+
 ```json
 {
   "extends": "@foxglove/tsconfig/node.json",
@@ -33,28 +35,31 @@ Choose the config that matches your environment:
 
 > **Note:** Uses `target: "ESNext"`. For older Node.js versions, set a lower target (e.g., `"ES2022"` for Node 18).
 
-> **Cross-platform libraries:** Use `node.json` even if your library will be used in frontend apps. Bundlers consume Node-style packages natively—just avoid Node-specific APIs like `fs` or `process`.
+> **Cross-platform libraries:** Use `node.json` even if your library will be used in bundled apps. Bundlers consume Node-style packages natively, just remember to avoid Node-specific APIs like `fs` or `process`.
 
-### Frontend applications (Vite, Webpack, esbuild, etc)
+### Bundled applications (Vite, Webpack, esbuild, etc)
 
-For bundled apps that run in the browser (not published as packages):
+Uses `module: "Preserve"` which allows extensionless imports (e.g., `import { foo } from "./bar"`, where the bundler handles resolution.
 
 ```json
 {
   "extends": "@foxglove/tsconfig/bundler.json",
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ESNext", "DOM"]
+  }
 }
 ```
 
 ### Base config
 
-Provides strict type-checking and modern defaults, but no `module`, `moduleResolution`, or `target` settings. Use this when `node.json` and `bundler.json` don't fit your environment:
+Provides strict type-checking and modern defaults, but no `module` or `moduleResolution` settings. Use this when `node.json` and `bundler.json` don't fit your environment:
 
 ```json
 {
   "extends": "@foxglove/tsconfig/base.json",
   "compilerOptions": {
-    "target": "...",
     "module": "...",
     "moduleResolution": "..."
   }
