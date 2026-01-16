@@ -39,7 +39,7 @@ Uses `module: "NodeNext"` which enforces Node.js ESM rules—imports must includ
 
 ### Bundled applications (Vite, Webpack, esbuild, etc)
 
-Uses `module: "Preserve"` which allows extensionless imports (e.g., `import { foo } from "./bar"`)—the bundler handles resolution.
+Uses `module: "Preserve"` which allows extensionless imports (e.g., `import { foo } from "./bar"`, where the bundler handles resolution.
 
 ```json
 {
