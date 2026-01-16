@@ -20,7 +20,7 @@ Choose the config that matches your environment:
 
 ### Node.js applications and libraries
 
-Uses `module: "NodeNext"` which enforces Node.js ESM rules—imports must include explicit file extensions (e.g., `import { foo } from "./bar.js"`).
+Uses `module: "NodeNext"` which enforces Node.js ESM rules—imports must include explicit file extensions (e.g., `import { foo } from "./bar.ts"`).
 
 ```json
 {
