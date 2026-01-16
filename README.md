@@ -54,7 +54,6 @@ Provides strict type-checking and modern defaults, but no `module` or `moduleRes
 {
   "extends": "@foxglove/tsconfig/base.json",
   "compilerOptions": {
-    "target": "...",
     "module": "...",
     "moduleResolution": "..."
   }
