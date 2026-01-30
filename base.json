@@ -31,7 +31,6 @@
     // Emit
     "declaration": true,
     "declarationMap": true,
-    "isolatedDeclarations": true,
     "newLine": "lf",
     "sourceMap": true,
 
