@@ -1,6 +1,6 @@
 {
   "name": "@foxglove/tsconfig",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Base TypeScript configuration for Foxglove projects",
   "license": "MIT",
   "repository": {
