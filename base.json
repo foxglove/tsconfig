@@ -35,6 +35,10 @@
     "sourceMap": true,
 
     // Performance
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    // TypeScript 6 migration
+    "ignoreDeprecations": "6.0",
+    "types": ["*"]
   }
 }
